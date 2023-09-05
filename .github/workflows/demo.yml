@@ -2,7 +2,7 @@ name: demo
 on:
   schedule:
     # every 15 minutes
-    - cron: "*/15 * * * *"
+    - cron: "*/60 * * * *"
   workflow_dispatch:
 jobs:
   demo:
@@ -11,7 +11,7 @@ jobs:
       - uses: azu/rss-to-twitter@v1
         with:
           # RSS feed URL
-          RSS_URL: "https://hnrss.org/newest"
+          RSS_URL: "https://kromiii.info/feed"
           TWEET_TEMPLATE: 'New Post: "%title%" %url%'
           UPDATE_WITHIN_MINUTES: 15
           # Twitter API Key
